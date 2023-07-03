@@ -1,1 +1,17 @@
+radius = float(input("Radius: "))
 
+diameter = 2 * radius
+
+circumference = diameter * 3.14
+
+surfaceArea = 4 * 3.14 * radius**2
+
+volume = (4.0/3) * 3.14 * radius**3
+
+print(diameter)
+
+print(circumference)
+
+print(surfaceArea)
+
+print(volume)
