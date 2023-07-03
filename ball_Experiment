@@ -1,0 +1,10 @@
+height=int(input("enter height from which the ball is dropped:"))
+bounce_index=float(input("enter the bounce index of the dropped ball:"))
+No_of_bounces=int(input("enter the no.of bounces the dropped ball taken:"))
+distance=0
+while No_of_bounces>0:
+   distance+=height
+   height=height*bounce_index
+   distance+=height
+   No_of_bounces-=1
+print("total distance travelled by the ball is:",distance,"units")
