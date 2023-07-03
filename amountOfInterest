@@ -1,0 +1,19 @@
+InitalPrice = float(input("Enter the Price of the Computer: "))
+Month = 0
+AnInterest = (InitalPrice - InitalPrice * .10) * .01 / 12
+MonthlyPayment = (InitalPrice - InitalPrice * .10) * 0.05 
+Principal = MonthlyPayment - AnInterest
+
+print("%0s%20s%20s%20s%13s%23s" %("Month", "Current Balance", "Interest Owed", "Principal Owed", "Payment", "Balance Remaining"))
+
+
+while MonthlyPayment >= 0:    
+    Month += 1
+    InitalPrice = InitalPrice - InitalPrice * .10 
+    Balance = InitalPrice + AnInterest - MonthlyPayment
+
+    print("%0d Months%20.2f%20.3f%20.2f%13.2f%23.2f" %(Month, InitalPrice, AnInterest, Principal, MonthlyPayment, Balance))
+
+
+    if Balance <= 0:
+        break
